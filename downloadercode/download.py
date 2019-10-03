@@ -64,10 +64,7 @@ class download():
 
         gui=GUImanager.guimanager()
         gui.gui_download_anim(len(download.thr)-1)
-        while sum(download.r)!=0:
-            print("waiting")
-            continue
-        download.combine(len(download.thr)-1)
+
 
 
 

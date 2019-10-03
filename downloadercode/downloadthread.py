@@ -46,7 +46,9 @@ class downloadthread(threading.Thread):
             if reqr.code == 206:
                 data=reqr.read()
                 f.write(data.decode('utf-8'))
-            self.persent='{:.3f}%'.format(((ed-self.s)/(self.e-self.s))*100)
+            self.persent='{:.3f}%'.format(((self.e-self.s)/(self.e-self.s))*100)
+            load.guiload.l[self.num].config(text=self.persent)
+
         f.close()
         download.download.r[self.num]=0
 
